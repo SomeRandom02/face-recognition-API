@@ -34,6 +34,7 @@ const handleApiCall = (req, res) => {
             
     fetch("https://api.clarifai.com/v2/models/face-detection/outputs", requestOptions)
         .then((response) => response.text())
+        .then((result) => result)
         .then(result => {
             if (response) {
                 res.json(result)
